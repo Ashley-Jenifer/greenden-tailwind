@@ -7,6 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
+
+    
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10" >
         <h1 class="text-2xl">GREENDEN</h1>
 
@@ -55,8 +57,8 @@
         <p class="mb-4">We offer you a wide range of artificial and natural flowers.</p>
         <h2 class="font-bold text-3xl md:text-5xl mb-5">Plants for your interior.</h2>
         <div>
-            <button class="bg-black rounded text-white p-2">Shop now</button>
-            <button class="border border-black p-2 rounded">Watch Video</button>
+            <button class="bg-black rounded text-white p-2" id="shopNow">Shop now</button>
+            <button class="border border-black p-2 rounded"><a href="https://www.bing.com/videos/riverview/relatedvideo?q=youtube+gardening+tips+uk&mid=AA99FE21F9B59E5BAAC5AA99FE21F9B59E5BAAC5&FORM=VIRE">Watch Video</a></button>
         </div>
 
         <p  class="mt-5">160+ Plant species| 100+ Clients</p>
@@ -123,24 +125,35 @@
         </div>
     </section>
     <section>
-           <h1 class="text-3xl mt-5 font-bold text-center">Customer Reviews</h1>
-            <div class="flex flex-col gap-5 justify-center text-white m-5 ">
-                <div class="bg-green-900 p-5 text-white container">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur illum exercitationem doloremque laboriosam? Asperiores consequuntur magnam nam harum aliquid vel enim quis quaerat dolores amet!</p>
-                    <p class="font-bold text-yellow-300">Genny Mathew</p>
-                </div>
-
-                <div class="bg-green-900 p-5 text-white container">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur illum exercitationem doloremque laboriosam? Asperiores consequuntur magnam nam harum aliquid vel enim quis quaerat dolores amet!</p>
-                    <p class="font-bold text-yellow-300">Jin</p>
-                </div>
-
-                <div class="bg-green-900 p-5 text-white container">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur illum exercitationem doloremque laboriosam? Asperiores consequuntur magnam nam harum aliquid vel enim quis quaerat dolores amet!</p>
-                    <p class="font-bold text-yellow-300">Adline</p>
-                </div> 
-             </div>
-    </section>
+        <h1 class="text-3xl mt-5 font-bold text-center">Customer Reviews</h1>
+        <div class="flex flex-col gap-5 justify-center text-white m-5">
+            <!-- Existing reviews -->
+            <div class="bg-green-900 p-5 text-white">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur illum exercitationem doloremque laboriosam? Asperiores consequuntur magnam nam harum aliquid vel enim quis quaerat dolores amet!</p>
+                <p class="font-bold text-yellow-300">Genny Mathew</p>
+            </div>
+        
+            <div class="bg-green-900 p-5 text-white">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur illum exercitationem doloremque laboriosam? Asperiores consequuntur magnam nam harum aliquid vel enim quis quaerat dolores amet!</p>
+                <p class="font-bold text-yellow-300">Jin</p>
+            </div>
+        
+            <div class="bg-green-900 p-5 text-white">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur illum exercitationem doloremque laboriosam? Asperiores consequuntur magnam nam harum aliquid vel enim quis quaerat dolores amet!</p>
+                <p class="font-bold text-yellow-300">Adline</p>
+            </div>
+            
+            <!-- New review container -->
+            <div class="bg-green-900 p-5 text-white flex flex-col gap-5 text-center md:flex-row " id="newReviewContainer">
+                <textarea id="reviewInput" placeholder="Enter your review" class="border border-black text-black p-2"></textarea>
+                <input type="text" id="nameInput" placeholder="Your Name" class="border border-black text-black p-2 ">
+                <button id="addReviewBtn" class="bg-black text-white p-2 w-fit h-10 m-5">Add Review</button>
+            </div> 
+        </div>
+        
+             
+    </div>  
+     </section>
     <section class="text-center">
         <h1 class="text-3xl font-bold mt-5 text-center">Join our Newsletter</h1>
         <p>Signup for our email newspaper to get exclusive discounts, updates and more</p>
