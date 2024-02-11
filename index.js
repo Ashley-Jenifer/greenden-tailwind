@@ -2,6 +2,9 @@ var menuicon=document.getElementById("menuicon")
 var sidenav=document.getElementById("sidenav")
 var closenav=document.getElementById("closenav")
 var shopnow=document.getElementById("shopNow")
+
+var subscribe =document.getElementById("subscribe")
+var subinput =document.getElementById("subinput")
 menuicon.addEventListener("click",function()
 
 {
@@ -43,6 +46,19 @@ addReviewBtn.addEventListener("click", function() {
         alert("Please enter both your name and review.");
     }
 })
-
+subscribe.addEventListener("click",function()
+{
+    if(subinput.value == "")
+    {
+        alert("Please enter your email address")   
+        
+    }
+else
+{
+    alert("Subscription added. Thank you!")
+    
+}
+subinput.value=""
+})
 
 
