@@ -21,7 +21,7 @@ sendMessage.addEventListener("click", function() {
     var message = document.getElementById("message").value;
 
     // Create a Blob with the message content
-    var blob = new Blob([`Email: ${email}\nSubject: ${subject}\n\n${message}`], { type: "text/plain;charset=utf-8" });
+    var blob = new Blob([`Email: ${email}\nSubject: ${subject}\nMessge: ${message}`], { type: "text/plain;charset=utf-8" });
 
     // Create a temporary link element
     var link = document.createElement("a");
