@@ -30,16 +30,15 @@ addReviewBtn.addEventListener("click", function() {
 
     if (nameInput !== "" && reviewInput !== "") {
         var existingReviews = document.querySelectorAll(".bg-green-900.p-5.text-white");
-        var firstReview = existingReviews[3]; // Get the first existing review
+        var firstReview = existingReviews[3];
 
         var newReviewDiv = document.createElement("div");
         newReviewDiv.className = "bg-green-900 p-5 text-white";
         newReviewDiv.innerHTML = "<p>" + reviewInput + "</p><p class='font-bold text-yellow-300'>" + nameInput + "</p>";
 
-        // Insert the new review before the first existing review
+       
         reviewContainer.insertBefore(newReviewDiv, firstReview);
 
-        // Clear input fields after adding the review
         document.getElementById("nameInput").value = "";
         document.getElementById("reviewInput").value = "";
     } else {
@@ -66,5 +65,3 @@ else
 }
 subinput.value=""
 })
-
-
