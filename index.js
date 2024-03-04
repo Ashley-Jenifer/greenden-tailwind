@@ -48,14 +48,20 @@ addReviewBtn.addEventListener("click", function() {
 })
 subscribe.addEventListener("click",function()
 {
+var emailRegix= /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
     if(subinput.value == "")
     {
         alert("Please enter your email address")   
         
     }
-else
+    else if(emailRegix.test(subinput.value))
+    {
+        alert("Subscription added. Thank you!")
+    }
+else 
 {
-    alert("Subscription added. Thank you!")
+    alert("Please enter valid mail id")
     
 }
 subinput.value=""
